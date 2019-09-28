@@ -22,6 +22,7 @@ function whileLoop(n) {
 
 	function incrementVariable() {
 		i = i + 1;
+		return i;
 	}
 
 function doWhileLoop(array) {
@@ -29,8 +30,9 @@ function doWhileLoop(array) {
 	do {
 		console.log('array.length = ' + array.length + ' and i = ' + i);
 		array = array.slice(1);
-		incrementVariable();
-	} while (array.length > 0 && i < 5);
+// 		incrementVariable();
+// 	} while (array.length > 0 && i < 5);
+  } while (incrementVariable() < array.length);
 
 	return array;
 }
